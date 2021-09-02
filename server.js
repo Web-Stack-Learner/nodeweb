@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }))
 /** Start DB Connection**/
 const mongoose = require('mongoose');
 // noinspection JSVoidFunctionReturnValueUsed
-mongoose.connect(DB_URL, { useNewUrlParser: true })
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true })
     .then(() => {
         console.log("Connection Successful")
     })
